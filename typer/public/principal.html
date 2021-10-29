@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Typer Challenge</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
+    <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="center">Typer Challenge</h1>
+        <p class="frase center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatibus tenetur accusamus placeat dicta nostrum sequi eos, iure suscipit id provident numquam natus quo esse cupiditate cumque. Cumque, qui ducimus?</p>
+        <div class="center">
+            <img src="img/spinner.gif" alt="Spinner" id="spinner">
+            <p id="erro">Ocorreu um erro, por favor tente mais tarde</p>
+        </div>
+        <ul class="informacoes center">
+            <li>
+                <i class="small material-icons icones">description</i>
+                <span id="tamanho-frase">0</span> palavras
+            </li>
+            <li>
+                <i class="small material-icons icones">query_builder</i> 
+                <span id="tempo-digitacao">3</span> segundos
+            </li>
+        </ul>
+        <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
+        <div class="botoes">
+            <a class="btn-floating btn-large waves-effect waves-light red" id="botao-reiniciar">
+                <i class="material-icons">restore</i>
+            </a>
+            <a class="btn-floating btn-large waves-effect waves-light green" id="botao-placar">
+                <i class="material-icons">assignment</i>
+            </a>
+            <a class="btn-floating btn-large waves-effect waves-light blue" id="botao-frase">
+                <i class="material-icons">shuffle</i>
+            </a>
+            <a class="btn-floating btn-large waves-effect waves-light cyan" id="botao-frase-id">
+                <i class="material-icons">repeat_one</i>
+            </a>
+            <input type="number" id="frase-id" min="0">
+
+            <div class="selectUsuarios">
+                <select id="usuarios">
+                    <option value="Douglas">Douglas</option>
+                    <option value="Flavio">Flavio</option>
+                    <option value="Nico">Nico</option>
+                </select>
+            </div>
+
+            <a class="btn-floating btn-large waves-effect waves-light yellow tooltip" title="Sincronizado com sucesso!" id="botao-sync">
+                <i class="material-icons">swap_vert</i>
+            </a>
+        </div>
+    
+        <ul class="center">
+            <li> 
+                <span id="contador-caracteres">0</span> caracteres
+            </li>
+            <li>
+                <span id="contador-palavras">0</span> palavras
+            </li>
+        </ul>
+
+        <section class="placar">
+            <h3 class="center">Placar</h3>
+            <table class="centered bordered">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>No. de palavras</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+        
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/placar.js"></script>
+    <script src="js/frase.js"></script>
+    <script src="js/selectize.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+</body>
+</html>
